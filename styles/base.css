@@ -1,4 +1,4 @@
-/* ========== Reset ========== */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,71 +15,103 @@ body {
   min-height: 100vh;
 }
 
-/* ========== Header ========== */
 header {
-  background: #003366;
+  background-color: #003366;
   color: white;
-  text-align: center;
   padding: 1rem;
+  text-align: center;
 }
 
-header h1 {
+#course-title {
+  display: block;
   font-family: 'Merriweather', serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-header .highlight {
-  color: #ffd700;
-  font-weight: bold;
-}
-
-/* ========== Navigation ========== */
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  background: #222;
-  padding: 0.5rem;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  padding: 0.25rem 0;
   transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
   color: #ffd700;
 }
 
-/* ========== Card Layout ========== */
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ========== Main Grid Layout ========== */
 .card-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr; /* left column bigger */
+  grid-template-areas:
+    "about resources"
+    "location resources";
   gap: 1.5rem;
   max-width: 1100px;
   margin: 2rem auto;
   padding: 1rem;
 }
 
-.card {
-  background: white;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.card h2 {
+.card-grid h1 {
+  grid-column: 1 / -1; /* span full width */
+  text-align: center;
   font-family: 'Merriweather', serif;
-  background-color: #003366;
+  font-size: 2rem;
+  color: #003366;
   margin-bottom: 1rem;
-  color: #b6d9fc;
 }
 
-/* About Me Card */
+
+.about {
+  grid-area: about;
+  background-color:#003366 ;
+}
+
+.location {
+  grid-area: location;
+  background-color: #003366;
+}
+
+.hobbies {
+  grid-area: resources;
+  background-color: #003366;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .about-flex {
   display: flex;
   gap: 1rem;
@@ -87,45 +119,37 @@ nav a:hover {
 }
 
 .about-flex img {
-  width: 120px;
-  height: auto;
+  max-width: 150px;
   border-radius: 8px;
 }
 
-/* Location Card */
+
 .location-flex {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .location-flex img {
-  width: 80px;
-  height: auto;
-  border: 1px solid #ccc;
+  max-width: 100px;
+  border-radius: 8px;
 }
 
-/* Resources Card */
-.resources ul {
-  list-style: none;
-  padding-left: 0;
+.card h2 {
+  background-color: #003366;
+  color: white;
+  padding: 0.5rem;
+}
+.hobbies ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
 }
 
-.resources li {
+.resources.hobbies li {
   margin-bottom: 0.5rem;
 }
 
-.resources a {
-  color: #003366;
-  text-decoration: none;
-}
 
-.resources a:hover {
-  text-decoration: underline;
-  color: #0055aa;
-}
-
-/* ========== Footer ========== */
 footer {
   background: #003366;
   color: white;
@@ -135,27 +159,19 @@ footer {
   margin-top: auto;
 }
 
-footer span {
-  color: #ffd700;
-}
 
-/* ========== Responsive ========== */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "about"
+      "location"
+      "resources";
   }
 
-  .about-flex {
+  .about-flex, .location-flex {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .about-flex img {
-    margin: 0 auto;
-  }
-
-  .location-flex {
-    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 }
