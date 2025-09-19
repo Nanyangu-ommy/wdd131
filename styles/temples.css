@@ -1,4 +1,4 @@
-
+l
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -62,7 +62,7 @@ main h1 {
 }
 
 img {
-  width: 100%;      
+  width: 70%;      
   height: 150px;
   object-fit: cover;
   border-radius: 4px;
