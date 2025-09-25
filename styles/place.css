@@ -92,7 +92,7 @@ footer {
   }
 
   .weather-card h2::after {
-    content: url("../images/partly-cloudy.svg");
+    content: url("image/cloud-sun.svg");
     margin-left: 8px;
   }
 }
