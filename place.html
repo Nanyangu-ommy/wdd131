@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table-mountain</title>
+    <meta name="description" content="A place i lived in">
+    <meta name="keywords" content="place, things, items">
+    <meta name="author" content="Omega Nanseta">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Cape Town, South Africa</h1>
+  </header>
+
+  <!-- Hero image with responsive srcset -->
+  <main class="hero">
+    <picture>
+      <source srcset="images/table-mountain.webp" media="(min-width: 900px)">
+      <source srcset="images/table-mountain.webp" media="(min-width: 600px)">
+      <img src="images/table-mountain.webp" alt="Cape Town view with Table Mountain">
+    </picture>
+
+    <!-- Data Section -->
+    <section class="data-card">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 2,461 sq km (metro)</li>
+        <li><strong>Population:</strong> ~4,800,000</li>
+        <li><strong>Country:</strong> South Africa</li>
+        <li><strong>Official Languages:</strong> Afrikaans, English, Xhosa</li>
+        <li><strong>Currency:</strong> South African Rand (ZAR)</li>
+        <li><strong>Time Zone:</strong> UTC+2</li>
+        <li><strong>Calling Code:</strong> +27</li>
+        <li><strong>Internet TLD:</strong> .za</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather-card">
+      <h2>Weather <span class="icon">⛅</span></h2>
+      <ul>
+        <li><strong>Temperature:</strong> <span id="temp">16</span>°C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> <span id="wind">12</span> km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> 🌸 Omega Ommy Nanseta 🌸 Malawi</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+  <script src="scripts/place.js" defer></script>
+</body>
+</html>
+
+    
