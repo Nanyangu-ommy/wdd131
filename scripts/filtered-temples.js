@@ -54,7 +54,7 @@ const temples = [
     dedicated: "1893, April, 6",
     area: 253015,
     imageUrl:
-      "https://www.churchofjesuschrist.org/media/image/salt-lake-temple-bb20ac2?lang=eng"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-utah/400x250/salt-lake-temple-253015-wallpaper.jpg"
   },
   {
     templeName: "Accra Ghana",
@@ -62,7 +62,7 @@ const temples = [
     dedicated: "2004, January, 11",
     area: 17500,
     imageUrl:
-      "https://www.churchofjesuschrist.org/media/image/accra-ghana-temple-lds-ea81753?lang=eng"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-17500-wallpaper.jpg"
   },
   {
     templeName: "Bangkok Thailand",
@@ -70,7 +70,7 @@ const temples = [
     dedicated: "2023, October, 22",
     area: 44405,
     imageUrl:
-      "https://www.churchofjesuschrist.org/media/image/20230511_001542_LES_Exterior__DSC0535.-49cf70b?lang=eng"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bangkok-thailand/400x250/bangkok-thailand-temple-44405-wallpaper.jpg"
   }
 ];
 
