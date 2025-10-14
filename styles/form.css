@@ -1,0 +1,101 @@
+/* General Setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header, footer {
+    background-color: #007bff; /* Blue */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Fieldset and Grouping */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: #007bff;
+    padding: 0 10px;
+}
+
+/* Input Consistency */
+label, select, input[type="date"], input[type="text"], textarea {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+select, input[type="date"], input[type="text"], textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Star Rating (Focus on function over complex design) */
+.rating {
+    display: flex;
+    flex-direction: row-reverse; /* Puts 5 on the left */
+    justify-content: flex-end;
+}
+
+.rating > input {
+    display: none; /* Hide the actual radio buttons */
+}
+
+.rating > label {
+    cursor: pointer;
+    font-size: 2em;
+    color: #ccc; /* Grey stars */
+    transition: color 0.2s;
+    /* Reset label block styling for inline element */
+    width: auto;
+    margin: 0 2px;
+}
+
+.rating > input:checked ~ label, 
+.rating > label:hover,
+.rating > label:hover ~ label {
+    color: gold; 
+}
+
+.submit-button {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.checkbox-group label {
+    display: inline-block;
+    width: auto;
+    margin-left: 5px;
+    margin-bottom: 0;
+}

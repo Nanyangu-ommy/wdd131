@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <fieldset>
+                <legend>Product Details</legend>
+                <label for="productName">Product Name (Required):</label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Overall Rating (Required)</legend>
+                <p>How many stars would you give?</p>
+
+                <div class="rating">
+                    <input type="radio" id="rating5" name="overallRating" value="5" required>
+                    <label for="rating5">★</label> <input type="radio" id="rating4" name="overallRating" value="4">
+                    <label for="rating4">★</label>
+
+                    <input type="radio" id="rating3" name="overallRating" value="3">
+                    <label for="rating3">★</label>
+
+                    <input type="radio" id="rating2" name="overallRating" value="2">
+                    <label for="rating2">★</label>
+
+                    <input type="radio" id="rating1" name="overallRating" value="1">
+                    <label for="rating1">★</label> </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="installDate">Date of Installation (Required):</label>
+                <input type="date" id="installDate" name="installDate" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Useful Features (Select all that apply)</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="featureDurable" name="usefulFeatures" value="Durable">
+                    <label for="featureDurable">Durability</label><br>
+
+                    <input type="checkbox" id="featureEasyUse" name="usefulFeatures" value="Easy to Use">
+                    <label for="featureEasyUse">Ease of Use</label><br>
+
+                    <input type="checkbox" id="featurePerformance" name="usefulFeatures" value="High Performance">
+                    <label for="featurePerformance">High Performance</label><br>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="writtenReview">Written Review (Optional):</label>
+                <textarea id="writtenReview" name="writtenReview" rows="6"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <label for="userName">Your Name (Optional):</label>
+                <input type="text" id="userName" name="userName">
+            </fieldset>
+
+            <input type="submit" value="Submit Product Review" class="submit-button">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span>🌸 Omega Ommy Nanseta 🌸 Malawi</p> 
+        <p>Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
