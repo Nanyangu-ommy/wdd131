@@ -1,76 +1,77 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 - Dynamic Web Fundamentals - Omega Nanseta</title>
-  <meta name="description" content="This is my homepage for my WDD131 project">
-  <meta name="author" content="Omega Nanseta">
+  <title>ComeHome Real Estate | Home</title>
+  <link rel="stylesheet" href="styles/project.css">
+  <script src="scripts/project.js" defer></script>
+  <style>
+.hero {
+  background: rgb(232, 232, 236);
+  color: #000;
+  padding: 50px;
+}
+</style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="styles/base.css">
-
-  
-  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-  
-  <header>
-    <span id="course-title">WDD 131: Dynamic Web Fundamentals </span>
-    <h1>Omega Ommy Nanseta</h1>
 
+  <header>
+    <h1>ComeHome Real Estate</h1>
     <nav>
       <ul>
-        <li><a href="https://www.linkedin.com/in/YOURUSERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener noreferrer">Scripture</a></li>
-        <li><a href="project-folder/index.html">Final Project</a></li>
-        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
-        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Docs</a></li>
-        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="card-grid">
-    
-
-    <section class="card about">
-      <h2>About Me</h2>
-      <div class="about-flex">
-        <p>My name is Omega Nanseta, and I am from Malawi. I am a mother of 3 beautiful babies and a wife to Jonathan Nanseta. I am so glad that I am one of the lucky few who are studying at BYU. My goal is to get my software development degree and be the best developer that ever lived. By the grace of God, I am sure I will achieve this goal.</p>
-        <img src="images/profile.webp" alt="Portrait of Omega Nanseta">
-      </div>
+  <main>
+    <section class="hero">
+      <h2>Find Your Dream Home Today</h2>
+      <p>Connecting you with quality homes at the best prices in your area.</p>
+      <a href="listings.html" class="btn">Browse Listings</a>
     </section>
 
-  
-    <section class="card hobbies">
-      <h2>My Hobbies</h2>
-      <ul>
-        <li>Worshipping</li>
-        <li>Cooking</li>
-        <li>Singing</li>
-        <li>Travelling</li>
-        <li>Walking</li>
-      </ul>
-    </section>
-
-    <section class="card location">
-      <h2>Lilongwe, Malawi</h2>
-      <div class="location-flex">
-        <img src="images/flag.jpg" alt="Flag of Malawi">
-        <p>Malawi is a landlocked country in southeastern Africa, known as the "Warm Heart of Africa" for its friendly people. It is home to Lake Malawi, one of the largest freshwater lakes in the world. Malawi is known for its natural beauty, wildlife, and vibrant culture.</p>
+    <section class="featured">
+      <h2>Featured Properties</h2>
+      <div class="property-grid">
+        <div class="property">
+          <img src="images/house1.webp" alt="Beautiful house with garden">
+          <h3>3-Bedroom House in Area 47</h3>
+          <p>$85,000</p>
+        </div>
+        <div class="property">
+          <img src="images/house2.webp" alt="Modern apartment">
+          <h3>Modern Apartment in Lilongwe</h3>
+          <p>$600,000</p>
+        </div>
+        <div class="property">
+          <img src="images/house3.webp" alt="Farm-style home">
+          <h3>Farm-Style Home in Area 25</h3>
+          <p>$540,000</p>
+        </div>
+        <div class="property">
+          <img src="images/house4.webp" alt="Beautiful home">
+          <h3>Beautiful Home in Area 3</h3>
+          <p>$750,000</p>
+        </div>
+        <div class="property">
+          <img src="images/house5.webp" alt="Family home">
+          <h3>Family Home in Area 25</h3>
+          <p>$100,000</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> 🌸 Omega Ommy Nanseta 🌸 Malawi</p>
-    <p>Last Modification: <span id="last-modified"></span></p>
+    <p>&copy; 2025 ComeHome Real Estate | Omega Ommy Nanseta</p>
   </footer>
+
 </body>
 </html>
+
